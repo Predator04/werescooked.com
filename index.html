@@ -1,0 +1,428 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <title>Body Balance System Revenue Audit</title>
+  <style>
+    :root{
+      --ink:#101820; --muted:#5d6975; --soft:#eef3f6; --line:#dce5ea; --paper:#ffffff;
+      --navy:#102f3d; --teal:#0f6f78; --red:#b42318; --orange:#c76a10; --blue:#2563eb;
+      --green:#13795b; --gold:#b98900; --shadow:0 20px 55px rgba(16,47,61,.14);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#f6f8fa;line-height:1.5}
+    a{color:#0f5f9f;text-decoration:none;font-weight:700}
+    a:hover{text-decoration:underline}
+    .hero{background:radial-gradient(circle at 20% 0%,rgba(36,139,151,.35),transparent 35%),linear-gradient(135deg,#0a2230,#113c4b 62%,#611d18);color:#fff;padding:46px 28px 92px}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+    .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:#9ed8df;font-weight:800;margin:0 0 12px}
+    h1{font-size:46px;line-height:1.04;margin:0 0 14px;letter-spacing:-.02em;max-width:920px}
+    .sub{font-size:18px;color:#dcecf0;max-width:860px;margin:0}
+    .meta{display:flex;flex-wrap:wrap;gap:18px;margin-top:26px}
+    .pill{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.08);padding:10px 13px;border-radius:999px;font-size:13px;color:#e9f7fa}
+    main{margin-top:-54px;padding-bottom:72px}
+    .panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+    .verdict{padding:28px;margin-bottom:22px;border-left:7px solid var(--red)}
+    .verdict h2{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:var(--red)}
+    .verdict p{margin:0;font-size:22px;font-weight:800;line-height:1.35}
+    .note{margin-top:12px;color:var(--muted);font-size:14px}
+    .grid{display:grid;gap:16px}
+    .stats{grid-template-columns:repeat(5,1fr);margin:22px 0}
+    .stat{padding:20px;text-align:center}
+    .stat strong{display:block;font-size:34px;line-height:1;color:var(--navy)}
+    .stat span{display:block;margin-top:8px;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:800}
+    .section{margin-top:34px}
+    .section h2{font-size:25px;margin:0 0 8px;letter-spacing:-.01em}
+    .section>p{margin:0 0 16px;color:var(--muted)}
+    .finding{overflow:hidden;margin:14px 0}
+    .finding-head{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--line);background:#fbfcfd}
+    .score{min-width:56px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#fff}
+    .s10,.s9{background:var(--red)} .s8,.s7{background:var(--orange)} .s6,.s5{background:var(--blue)}
+    .finding h3{margin:0;font-size:16px;line-height:1.3}
+    .tag{margin-left:auto;font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:900;color:#fff;background:#71808e;border-radius:999px;padding:5px 9px;white-space:nowrap}
+    .finding-body{padding:16px 18px 18px}
+    .row{display:grid;grid-template-columns:92px 1fr;gap:12px;margin:0 0 10px;font-size:14.5px}
+    .row:last-child{margin-bottom:0}
+    .label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:900;color:var(--muted);padding-top:2px}
+    code{background:#eef3f6;color:#8b241c;border-radius:5px;padding:2px 6px;font-size:13px}
+    .two{grid-template-columns:1.2fr .8fr}
+    .card{padding:22px}
+    .card h3{margin:0 0 8px;font-size:17px}
+    .card p{margin:0 0 10px;color:var(--muted);font-size:14px}
+    .card ul{margin:10px 0 0;padding-left:19px;font-size:14px}
+    li{margin:7px 0}
+    .adbox{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
+    .shot{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
+    .shot img{display:block;width:100%;height:auto}
+    .evidence-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .evidence-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+    .evidence-card img{display:block;width:100%;height:auto;border-bottom:1px solid var(--line)}
+    .evidence-card div{padding:14px 16px}
+    .evidence-card h3{margin:0 0 5px;font-size:15px}
+    .evidence-card p{margin:0;color:var(--muted);font-size:13.5px}
+    .timeline{grid-template-columns:repeat(3,1fr)}
+    .phase{padding:20px;border-top:5px solid var(--teal)}
+    .phase h3{margin:0 0 4px}
+    .when{font-size:12px;color:var(--teal);font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+    .sources{font-size:13px}
+    .sources td,.sources th{border-bottom:1px solid var(--line);padding:10px;text-align:left;vertical-align:top}
+    table{border-collapse:collapse;width:100%}
+    th{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+    .good{border-left:6px solid var(--green)}
+    .warn{border-left:6px solid var(--gold)}
+    footer{margin-top:34px;color:var(--muted);font-size:12px;text-align:center}
+    @media(max-width:900px){.stats,.timeline,.two,.adbox{grid-template-columns:1fr}.stat strong{font-size:28px}h1{font-size:34px}.tag{display:none}.row{grid-template-columns:1fr}}
+    @media(max-width:900px){.evidence-grid{grid-template-columns:1fr}}
+    @media print{body{background:#fff}.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}.panel{box-shadow:none;break-inside:avoid}.finding{break-inside:avoid}}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Revenue Audit Dashboard</p>
+      <h1>Why bodybalancesystemonline.com is not converting paid and organic demand into revenue</h1>
+      <p class="sub">Evidence-backed audit of the live site, public SEO surfaces, lead paths, and public ad transparency data. Findings below include proof links and a severity score from 1 to 10.</p>
+      <div class="meta">
+        <span class="pill">Domain audited: bodybalancesystemonline.com</span>
+        <span class="pill">Compiled: May 29, 2026</span>
+        <span class="pill">Validation: live website checks and public-source review</span>
+        <span class="pill">No private ad account access used</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel verdict">
+      <h2>Executive Verdict</h2>
+      <p>The site has enough product proof to sell, but interested buyers are being sent to broken, confusing, or incomplete next steps.</p>
+      <p class="note">Important: public Google Ads Transparency confirms ads exist for the domain, but it does not report clicks, cost, CTR, conversions, keywords, or targeting. Any ad performance claims must be verified inside the ad accounts before being treated as final.</p>
+    </section>
+
+    <section class="grid stats">
+      <div class="panel stat"><strong>9</strong><span>highest issue score</span></div>
+      <div class="panel stat"><strong>35</strong><span>public Google ad records found</span></div>
+      <div class="panel stat"><strong>9+</strong><span>broken blog URLs confirmed</span></div>
+      <div class="panel stat"><strong>46</strong><span>empty meta descriptions</span></div>
+      <div class="panel stat"><strong>Access</strong><span>needed for ad performance</span></div>
+    </section>
+
+    <section class="section">
+      <h2>Visual Evidence</h2>
+      <p>Screenshots were taken from the live site during this audit.</p>
+      <div class="evidence-grid">
+        <article class="evidence-card">
+          <img src="evidence-broken-blog-404.png" alt="Screenshot showing a 404 page for a broken resource link">
+          <div>
+            <h3>Broken resource link returns 404</h3>
+            <p>Example tested URL: <a href="https://bodybalancesystemonline.com/blogs/resources-3/red-light-therapy-pricing">/blogs/resources-3/red-light-therapy-pricing</a>. Fix with 301 redirects or restore the missing article.</p>
+          </div>
+        </article>
+        <article class="evidence-card">
+          <img src="evidence-homepage-hero.png" alt="Screenshot of homepage hero showing Red Light Done Right headline">
+          <div>
+            <h3>Homepage hero is broad and has no visible quote CTA</h3>
+            <p>The first screen says "RED LIGHT DONE RIGHT" but does not show a direct quote, financing, or consultation action above the fold.</p>
+          </div>
+        </article>
+        <article class="evidence-card">
+          <img src="evidence-ovation-product.png" alt="Screenshot of OvationULT page showing price and add to cart button">
+          <div>
+            <h3>High-ticket product page leads with Add to cart</h3>
+            <p>The OvationULT page shows the $59,997 price and Add to cart button. Add quote, financing, and specialist call CTAs beside this area.</p>
+          </div>
+        </article>
+        <article class="evidence-card">
+          <img src="evidence-collections.png" alt="Screenshot of collections page">
+          <div>
+            <h3>Collections page used for URL/canonical cleanup check</h3>
+            <p>Both <a href="https://bodybalancesystemonline.com/collections">/collections</a> and <a href="https://bodybalancesystemonline.com/collections/">/collections/</a> load public collection-list pages. Choose one canonical version.</p>
+          </div>
+        </article>
+        <article class="evidence-card">
+          <img src="google-ads-transparency-bodybalance.png" alt="Google Ads Transparency Center screenshot for bodybalancesystemonline.com">
+          <div>
+            <h3>Public Google ad records exist</h3>
+            <p>Google Ads Transparency shows public ad records for the domain. It does not prove clicks, costs, leads, or profitability.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Highest-Priority Revenue Breaks</h2>
+      <p>These are the problems most likely to stop a qualified buyer from becoming a lead or customer.</p>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="score s9">9/10</div><h3>Broken internal resource links create 404s in the buyer research journey</h3><span class="tag">Broken links</span></div>
+        <div class="finding-body">
+          <p class="row"><span class="label">Proof</span><span>Direct checks returned 404 for internal links such as <a href="https://bodybalancesystemonline.com/blogs/resources-3/red-light-therapy-pricing">red-light-therapy-pricing</a>, <a href="https://bodybalancesystemonline.com/blogs/resources-3/fda-registered-meaning">fda-registered-meaning</a>, <a href="https://bodybalancesystemonline.com/blogs/resources-3/how-to-add-rlt-to-medspa">how-to-add-rlt-to-medspa</a>, <a href="https://bodybalancesystemonline.com/blogs/resources-3/photobiomodulation-mechanism">photobiomodulation-mechanism</a>, and <a href="https://bodybalancesystemonline.com/blogs/resources-3/peer-reviewed-research">peer-reviewed-research</a>. These links appear inside live content on the <a href="https://bodybalancesystemonline.com/">homepage</a> and resource sections.</span></p>
+          <p class="row"><span class="label">Impact</span><span>Visitors researching pricing, FDA registration, medspa implementation, and photobiomodulation hit dead pages instead of moving toward trust and purchase readiness.</span></p>
+          <p class="row"><span class="label">Fix</span><span>In Shopify, create 301 redirects for every broken <code>/blogs/resources-3/...</code> URL listed in this report. If a matching article exists, redirect to it. If no matching article exists, redirect to <code>/blogs/resources</code>. Then search Shopify theme/content for <code>/blogs/resources-3/</code> and replace those links with the final live URLs. Afterward, each listed URL must return 301 or 200, not 404.</span></p>
+        </div>
+      </article>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="score s8">8/10</div><h3>Homepage above-the-fold offer is vague and does not present a clear primary CTA</h3><span class="tag">CRO</span></div>
+        <div class="finding-body">
+          <p class="row"><span class="label">Proof</span><span>The homepage opens with "RED LIGHT DONE RIGHT" and "WHERE TECHNOLOGY MEETS WELLNESS" on <a href="https://bodybalancesystemonline.com/">the live homepage</a>. The HTML also contains "Promote your products" and "Click Here To Find Out How" as video overlay text, not as clear primary lead buttons.</span></p>
+          <p class="row"><span class="label">Impact</span><span>Paid traffic has seconds to understand the offer. The current first screen does not immediately say commercial red light therapy beds, who they are for, what action to take, or why the buyer should engage now.</span></p>
+          <p class="row"><span class="label">Fix</span><span>Change the homepage hero headline text to <code>Commercial Red Light Therapy Beds for Wellness Practices</code>. Under it, add one sentence: <code>USA-made red light therapy and ionic detox systems for practices, spas, recovery centers, and wellness businesses.</code> Add a primary button above the fold labeled <code>Request a Quote</code> linking to the final contact page. Add a secondary button labeled <code>Compare Systems</code> linking to <code>/collections/all-products</code>.</span></p>
+        </div>
+      </article>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="score s8">8/10</div><h3>Product page pushes a $59,997 cart purchase instead of a high-ticket sales path</h3><span class="tag">CRO</span></div>
+        <div class="finding-body">
+          <p class="row"><span class="label">Proof</span><span>The <a href="https://bodybalancesystemonline.com/products/ovationult">OvationULT product page</a> shows "Regular price $59,997.00 USD," quantity controls, and "Add to cart." The strongest financing and consultation actions are not placed beside the price. I confirmed the product can be added to the Shopify cart, so the problem is not a broken cart button. The problem is that a high-ticket buyer is being pushed toward checkout before quote, financing, or consultation options are made clear.</span></p>
+          <p class="row"><span class="label">Impact</span><span>A buyer considering a capital equipment purchase usually needs financing, install fit, ROI math, proof, and a consultation before checkout. A standard ecommerce CTA can suppress qualified leads.</span></p>
+          <p class="row"><span class="label">Fix</span><span>On <code>/products/ovationult</code>, add three buttons directly beside or below the $59,997 price: <code>Request a Quote</code> to the final contact page, <code>Apply for Financing</code> to the Reliant application or final financing page, and <code>Talk to a Specialist</code> to the final contact page. Move <code>Add to cart</code> below those buttons or label it as secondary.</span></p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>SEO and Traffic Acquisition Issues</h2>
+      <p>These defects reduce organic visibility, split authority, or waste high-intent search demand.</p>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="score s8">8/10</div><h3>Homepage has an empty H1</h3><span class="tag">SEO</span></div>
+        <div class="finding-body">
+          <p class="row"><span class="label">Proof</span><span>Direct HTML check on <a href="https://bodybalancesystemonline.com/">the homepage</a> found one H1 element with empty text. The visible hero copy is not the page H1.</span></p>
+          <p class="row"><span class="label">Impact</span><span>The homepage loses a basic topical signal for commercial red light therapy beds and ionic foot detox systems.</span></p>
+          <p class="row"><span class="label">Fix</span><span>Edit the homepage template so the visible main headline is the only H1. Use this H1 text: <code>Commercial Red Light Therapy Beds and Ionic Foot Detox Systems</code>. Do not leave the logo or hidden header as an empty H1.</span></p>
+        </div>
+      </article>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="score s8">8/10</div><h3>Duplicate and stale public URLs are indexable and self-canonical</h3><span class="tag">SEO</span></div>
+        <div class="finding-body">
+          <p class="row"><span class="label">Proof</span><span>Multiple variants return 200 and self-canonical, including <a href="https://bodybalancesystemonline.com/pages/about-us">/pages/about-us</a>, <a href="https://bodybalancesystemonline.com/pages/about-us-1">/pages/about-us-1</a>, <a href="https://bodybalancesystemonline.com/pages/about">/pages/about</a>, <a href="https://bodybalancesystemonline.com/pages/contact-us">/pages/contact-us</a>, <a href="https://bodybalancesystemonline.com/pages/contact-us-1">/pages/contact-us-1</a>, <a href="https://bodybalancesystemonline.com/pages/contact">/pages/contact</a>, <a href="https://bodybalancesystemonline.com/pages/financing">/pages/financing</a>, <a href="https://bodybalancesystemonline.com/pages/financing-1">/pages/financing-1</a>, and <a href="https://bodybalancesystemonline.com/pages/financing-2">/pages/financing-2</a>. The <a href="https://bodybalancesystemonline.com/sitemap_pages_1.xml?from=188140995&to=104751595622">pages sitemap</a> lists several of them.</span></p>
+          <p class="row"><span class="label">Impact</span><span>Google receives multiple versions of the same intent. Authority and engagement split across stale pages, and buyers can land on weaker versions.</span></p>
+          <p class="row"><span class="label">Fix</span><span>Choose one live URL for each page type and redirect the rest. Use <code>/pages/about-us</code> for About, <code>/pages/contact-us</code> or <code>/pages/contact-us-1</code> for Contact, and <code>/pages/financing-1</code> for Financing. Add 301 redirects from the unused versions to the chosen version. Update the header, footer, sitemap, and all internal links to use only the chosen versions.</span></p>
+        </div>
+      </article>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="score s7">7/10</div><h3>Several important pages have wrong or missing H1/meta descriptions</h3><span class="tag">SEO</span></div>
+        <div class="finding-body">
+          <p class="row"><span class="label">Proof</span><span><a href="https://bodybalancesystemonline.com/pages/financing">/pages/financing</a> has H1 "Clinical Research" and empty meta description. <a href="https://bodybalancesystemonline.com/pages/about">/pages/about</a> also has H1 "Clinical Research" and empty meta description. <a href="https://bodybalancesystemonline.com/pages/red-light-therapy">/pages/red-light-therapy</a> has no H1 and empty meta description. <a href="https://bodybalancesystemonline.com/pages/store-locator">/pages/store-locator</a> has no H1 and empty meta description.</span></p>
+          <p class="row"><span class="label">Impact</span><span>Search snippets and page-topic signals are weak on pages that should capture commercial and navigational demand.</span></p>
+          <p class="row"><span class="label">Fix</span><span>Update these exact SEO fields in Shopify. <code>/pages/financing</code> H1 should be <code>Equipment Financing</code> or redirect it to <code>/pages/financing-1</code>. <code>/pages/about</code> H1 should be <code>About Body Balance System</code> or redirect it. <code>/pages/red-light-therapy</code> needs one H1: <code>Red Light Therapy Systems</code>. <code>/pages/store-locator</code> needs one H1: <code>Therapy Locator</code> or redirect it to the active locator page. Add a unique meta description to every page kept live.</span></p>
+        </div>
+      </article>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="score s7">7/10</div><h3>Draft-looking "copy-of" landing pages are public and sitemap-listed</h3><span class="tag">SEO trust</span></div>
+        <div class="finding-body">
+          <p class="row"><span class="label">Proof</span><span>The public sitemap lists URLs like <a href="https://bodybalancesystemonline.com/pages/copy-of-red-light-therapy-beds-for-your-business-landing-page">copy-of-red-light-therapy-beds-for-your-business-landing-page</a>, <a href="https://bodybalancesystemonline.com/pages/copy-of-red-light-therapy-pads-for-your-business-landing-page">copy-of-red-light-therapy-pads-for-your-business-landing-page</a>, and <a href="https://bodybalancesystemonline.com/pages/copy-of-detox-for-better-health-landing-page">copy-of-detox-for-better-health-landing-page</a>.</span></p>
+          <p class="row"><span class="label">Impact</span><span>Draft URL naming reduces trust, dilutes topical focus, and can be used accidentally as paid ad destinations.</span></p>
+          <p class="row"><span class="label">Fix</span><span>Do not leave URLs containing <code>copy-of</code> public. For each <code>copy-of</code> page, either rename it to a clean final URL or create a 301 redirect to the final page. Example: redirect <code>/pages/copy-of-red-light-therapy-beds-for-your-business-landing-page</code> to a clean URL such as <code>/pages/red-light-therapy-beds-for-business</code>. Confirm no <code>copy-of</code> URLs remain in the sitemap.</span></p>
+        </div>
+      </article>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="score s6">6/10</div><h3>Condition-named product URLs create medical-claim and duplicate-snippet risk</h3><span class="tag">SEO compliance</span></div>
+        <div class="finding-body">
+          <p class="row"><span class="label">Proof</span><span>The product sitemap includes <a href="https://bodybalancesystemonline.com/products/anxiety">/products/anxiety</a>, <a href="https://bodybalancesystemonline.com/products/arthritis">/products/arthritis</a>, <a href="https://bodybalancesystemonline.com/products/depression">/products/depression</a>, and <a href="https://bodybalancesystemonline.com/products/pain">/products/pain</a>. Anxiety and arthritis use the same meta description: "Red Light Therapy... improve unwanted conditions within the body." Depression and pain have empty descriptions.</span></p>
+          <p class="row"><span class="label">Impact</span><span>These pages may attract sensitive medical-condition searches while using thin or duplicate metadata. That creates SEO quality risk and advertising compliance risk.</span></p>
+          <p class="row"><span class="label">Fix</span><span>Decide whether condition pages like <code>/products/anxiety</code>, <code>/products/arthritis</code>, <code>/products/depression</code>, and <code>/products/pain</code> should exist. If they are not real products, 301 redirect them to a relevant education page or collection page. If they stay live, remove medical cure/treatment language, add unique meta descriptions, add citations, and have compliance review the copy.</span></p>
+        </div>
+      </article>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="score s7">7/10</div><h3>Large sitemap crawl found many pages missing basic SEO fields</h3><span class="tag">SEO cleanup</span></div>
+        <div class="finding-body">
+          <p class="row"><span class="label">Proof</span><span>A public sitemap crawl of <a href="https://bodybalancesystemonline.com/sitemap.xml">sitemap.xml</a> found 46 live pages with empty meta descriptions and 10 live pages with missing or empty H1 text. Examples include <a href="https://bodybalancesystemonline.com/blogs/resources">/blogs/resources</a>, <a href="https://bodybalancesystemonline.com/blogs/resources-3">/blogs/resources-3</a>, <a href="https://bodybalancesystemonline.com/pages/contact-us-1">/pages/contact-us-1</a>, <a href="https://bodybalancesystemonline.com/pages/red-light-therapy">/pages/red-light-therapy</a>, and <a href="https://bodybalancesystemonline.com/pages/news">/pages/news</a>.</span></p>
+          <p class="row"><span class="label">Impact</span><span>Weak titles, empty descriptions, and missing H1s reduce the chance that buyers understand and click the correct search result.</span></p>
+          <p class="row"><span class="label">Fix</span><span>Export all Shopify pages, blogs, collections, and products. Fill in three fields for every page kept public: Page Title, Meta Description, and H1. If a page is not meant to be public, 301 redirect it to the best live page or remove it from navigation and sitemap.</span></p>
+        </div>
+      </article>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="score s6">6/10</div><h3>Homepage performance is below where paid landing traffic should be</h3><span class="tag">Speed</span></div>
+        <div class="finding-body">
+          <p class="row"><span class="label">Proof</span><span>A Lighthouse test run on the live homepage scored Performance 49, Accessibility 83, Best Practices 50, and SEO 85. Key measured issues were Largest Contentful Paint 4.6 seconds, Total Blocking Time 840 ms, Speed Index 15.8 seconds, and Time to Interactive 21.1 seconds.</span></p>
+          <p class="row"><span class="label">Impact</span><span>Slow pages reduce paid ad conversion rates, especially on mobile. Buyers may leave before the page becomes easy to use.</span></p>
+          <p class="row"><span class="label">Fix</span><span>Compress and resize homepage hero/media images, lazy-load below-the-fold images and videos, remove unused Shopify apps/scripts, defer noncritical JavaScript, and rerun Lighthouse until Performance is at least 75 on mobile and 85 on desktop.</span></p>
+        </div>
+      </article>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="score s5">5/10</div><h3>Lighthouse confirmed image alt text problems</h3><span class="tag">Accessibility SEO</span></div>
+        <div class="finding-body">
+          <p class="row"><span class="label">Proof</span><span>The Lighthouse homepage audit failed the image-alt check: "Image elements do not have alt attributes." The public homepage tested was <a href="https://bodybalancesystemonline.com/">https://bodybalancesystemonline.com/</a>.</span></p>
+          <p class="row"><span class="label">Impact</span><span>Missing or generic alt text weakens accessibility and can reduce image/search context for product-heavy pages.</span></p>
+          <p class="row"><span class="label">Fix</span><span>Review homepage and product template images. Product images should use clear alt text like <code>OvationULT red light therapy bed</code>. Decorative icons should use empty alt text <code>alt=""</code>. Do not use generic alt text like <code>Image</code>.</span></p>
+        </div>
+      </article>
+
+      <article class="panel finding">
+        <div class="finding-head"><div class="score s4">4/10</div><h3>Collections page has duplicate URL versions</h3><span class="tag">SEO cleanup</span></div>
+        <div class="finding-body">
+          <p class="row"><span class="label">Proof</span><span>Both <a href="https://bodybalancesystemonline.com/collections">/collections</a> and <a href="https://bodybalancesystemonline.com/collections/">/collections/</a> load public collection-list pages.</span></p>
+          <p class="row"><span class="label">Impact</span><span>This is a lower-priority duplicate URL issue, but it adds to the overall sitemap/canonical cleanup problem.</span></p>
+          <p class="row"><span class="label">Fix</span><span>Choose one version, preferably <code>/collections</code>. Add a 301 redirect from the other version to the chosen version and use the chosen version in internal links.</span></p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>Paid Ads Review</h2>
+      <p>Public ad libraries can prove whether ads exist, but not whether ads generated clicks, leads, sales, or profitable traffic. That requires ad account access or exports.</p>
+      <div class="panel card adbox">
+        <div>
+          <h3>Confirmed public ad data</h3>
+          <p><a href="https://adstransparency.google.com/?region=US&domain=bodybalancesystemonline.com">Google Ads Transparency Center</a> showed 35 ads associated with bodybalancesystemonline.com during this audit. This proves Google has public ad records for the domain.</p>
+          <p>It does not show clicks, CTR, cost, conversions, keywords, match types, search terms, audiences, negative keywords, placement quality, landing page performance, or management fees.</p>
+          <h3>What to investigate if paid ads are not producing traffic</h3>
+          <ul>
+            <li>If ads are active but clicks are not showing in reports, first verify the account, date range, campaign status, and traffic objective.</li>
+            <li>Possible causes include wrong date filters, campaigns optimized for impressions or video views, disapproved or limited ads, no active keywords, low bids, wrong geography, broken tracking, or reporting against the wrong account.</li>
+            <li>The site may lose interested buyers after the click because the contact and financing path is broken, but ad click volume itself must be verified inside the ad platforms.</li>
+          </ul>
+          <h3>Account access and reports needed</h3>
+          <ul>
+            <li>Read-only Google Ads access, billing summary, campaign list, search terms, change history, conversion action setup, landing-page report, ad status/disapproval report, and UTM-tagged GA4 traffic.</li>
+            <li>Spend split: media spend vs management fee vs creative/software fees.</li>
+            <li>Weekly KPI table: impressions, clicks, CTR, CPC, conversions, cost per lead, calls, form starts, form submits, and booked calls.</li>
+          </ul>
+          <h3>Ads evidence checklist</h3>
+          <ul>
+            <li>Google Ads read-only access granted.</li>
+            <li>Meta Ads Manager read-only access granted, if Meta ads are being managed.</li>
+            <li>Last 90 days of cost, clicks, conversions, cost per lead, and campaign status exported.</li>
+            <li>Search terms report exported.</li>
+            <li>Landing page report exported.</li>
+            <li>Conversion tracking setup reviewed.</li>
+            <li>Management fees separated from media cost.</li>
+          </ul>
+        </div>
+        <figure class="shot">
+          <img src="google-ads-transparency-bodybalance.png" alt="Google Ads Transparency Center screenshot showing 35 ads for bodybalancesystemonline.com">
+        </figure>
+      </div>
+      <div class="panel card warn" style="margin-top:16px">
+        <h3>Meta / Facebook ads</h3>
+        <p>The public Meta Ad Library search for "Body Balance System" did not return verifiable results in this audit environment. Use <a href="https://www.facebook.com/ads/library/?active_status=all&ad_type=all&country=US&q=Body%20Balance%20System&search_type=keyword_unordered&media_type=all">this Meta Ad Library search link</a> manually or request Meta Ads Manager read-only access.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Data Needed For A Final Revenue Diagnosis</h2>
+      <div class="panel card">
+        <p>The public-site audit can prove site issues. A final revenue diagnosis requires these exports from the ad, analytics, commerce, and lead systems.</p>
+        <ul>
+          <li>Google Ads: last 90 days by campaign with cost, impressions, clicks, CTR, CPC, conversions, conversion rate, and cost per conversion.</li>
+          <li>Google Ads: search terms report, landing page report, keyword report, ad status/disapproval report, and change history.</li>
+          <li>Meta Ads, if used: last 90 days by campaign/ad set/ad with cost, impressions, clicks, landing page views, leads, and cost per lead.</li>
+          <li>GA4: traffic acquisition report by source/medium, landing page report, key events/conversions, and form-submit events.</li>
+          <li>Shopify/forms/CRM: all form submissions, phone-call leads, abandoned checkouts, orders, refunds, and lead source fields.</li>
+          <li>Call tracking, if used: call volume, source, recordings or summaries, missed calls, and booked appointments.</li>
+        </ul>
+        <p>Without these files, nobody can accurately say whether the main problem is ad targeting, tracking, landing pages, sales follow-up, pricing, or offer-market fit.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Recommended Path In Plain English</h2>
+      <p>This is the clean path to follow. Do not spend more money driving traffic until the broken pages, unclear next steps, and tracking gaps are fixed.</p>
+      <div class="grid timeline">
+        <div class="panel phase">
+          <div class="when">Step 1</div>
+          <h3>Stop sending visitors to bad pages</h3>
+          <ul>
+            <li>Fix every broken blog/resource link that sends visitors to a 404 page.</li>
+            <li>Redirect each broken URL to the closest live article, or recreate the missing article.</li>
+            <li>Remove public draft URLs that contain <code>copy-of</code>.</li>
+            <li>Do not use broken, duplicate, or draft pages as ad landing pages.</li>
+          </ul>
+        </div>
+        <div class="panel phase">
+          <div class="when">Step 2</div>
+          <h3>Make the buying path obvious</h3>
+          <ul>
+            <li>The homepage should immediately say what is sold and who it is for.</li>
+            <li>Add a clear <code>Request a Quote</code> button on the first screen of the homepage.</li>
+            <li>On high-priced product pages, show <code>Request a Quote</code>, <code>Apply for Financing</code>, and <code>Talk to a Specialist</code> next to the price.</li>
+            <li>Keep <code>Add to cart</code>, but do not make it the only obvious next step for a high-ticket product.</li>
+          </ul>
+        </div>
+        <div class="panel phase">
+          <div class="when">Step 3</div>
+          <h3>Clean up Google-facing pages</h3>
+          <ul>
+            <li>Give each important page one clear headline, one unique page title, and one unique meta description.</li>
+            <li>Choose one final URL for each page type: About, Contact, Financing, Collections, and product/category pages.</li>
+            <li>Redirect duplicate versions to the final version so Google does not see multiple copies of the same page.</li>
+            <li>Remove or rewrite thin condition pages such as anxiety, arthritis, depression, and pain if they are not real product pages.</li>
+          </ul>
+        </div>
+        <div class="panel phase">
+          <div class="when">Step 4</div>
+          <h3>Measure the full lead path</h3>
+          <ul>
+            <li>Track every quote button click, financing click, form start, form submit, phone click, email click, add to cart, and checkout start.</li>
+            <li>Use one reporting view that shows where each lead came from: Google Ads, Meta Ads, organic search, direct, email, or referral.</li>
+            <li>Do not judge ad performance until ad, analytics, form, phone, and sales data are connected.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Fix List With Simple Confirmation Steps</h2>
+      <p>Each item below has a plain pass/fail check.</p>
+      <div class="panel card">
+        <table class="sources">
+          <thead><tr><th>Priority</th><th>Fix</th><th>Why it matters</th><th>How to confirm</th></tr></thead>
+          <tbody>
+            <tr><td>Fix Now</td><td>Create 301 redirects for broken <code>/blogs/resources-3/...</code> links.</td><td>Visitors researching pricing, FDA registration, medspa setup, and clinical topics are hitting 404 pages.</td><td>Open each old URL. It should load a live page or redirect to one. It should not show "Page not found."</td></tr>
+            <tr><td>Fix Now</td><td>Change homepage headline and add a visible <code>Request a Quote</code> button above the fold.</td><td>The first screen needs to explain the offer quickly and give interested buyers a direct next step.</td><td>Open the homepage on desktop and mobile. Without scrolling, it should say what is sold and show the quote button.</td></tr>
+            <tr><td>Fix Now</td><td>Add quote, financing, and specialist-call buttons beside the OvationULT price.</td><td>A $59,997 product needs a sales path, not just an ecommerce cart button.</td><td>Open <code>/products/ovationult</code>. The three sales buttons should appear beside or directly under the price.</td></tr>
+            <tr><td>Fix Next</td><td>Fix the homepage H1.</td><td>The homepage currently has an empty H1, which weakens the main page signal for search engines.</td><td>Inspect the page. There should be exactly one non-empty H1: <code>Commercial Red Light Therapy Beds and Ionic Foot Detox Systems</code>.</td></tr>
+            <tr><td>Fix Next</td><td>Redirect duplicate About, Contact, Financing, and Collections URLs.</td><td>Duplicate pages split search signals and make site maintenance messy.</td><td>Only one final URL should remain for each page type. Old versions should 301 redirect to the final version.</td></tr>
+            <tr><td>Fix Next</td><td>Remove or redirect all public URLs containing <code>copy-of</code>.</td><td>Draft-looking URLs reduce trust and should not appear in search or ads.</td><td>Open the sitemap and search for <code>copy-of</code>. There should be zero results.</td></tr>
+            <tr><td>Fix Next</td><td>Fill missing page titles, meta descriptions, and H1s.</td><td>Search results need clear titles and descriptions so buyers know which result to click.</td><td>Every public page kept in the sitemap should have a unique title, meta description, and visible H1.</td></tr>
+            <tr><td>Cleanup</td><td>Improve homepage speed.</td><td>Slow pages lose paid and organic visitors before they can take action.</td><td>Rerun Lighthouse. Target at least 75 Performance on mobile and 85 on desktop.</td></tr>
+            <tr><td>Cleanup</td><td>Fix image alt text.</td><td>Missing image descriptions hurt accessibility and weaken product context.</td><td>Rerun Lighthouse. The image-alt issue should be gone.</td></tr>
+            <tr><td>Needs Access</td><td>Connect ad, analytics, form, phone, and sales data.</td><td>Without this, no one can accurately say whether the problem is ads, landing pages, tracking, follow-up, pricing, or offer fit.</td><td>Produce a report showing spend, clicks, leads, calls, form submissions, booked calls, and sales by source.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Evidence Sources</h2>
+      <div class="panel card">
+        <table class="sources">
+          <thead><tr><th>Source</th><th>What it proved</th></tr></thead>
+          <tbody>
+            <tr><td><a href="https://bodybalancesystemonline.com/">Homepage</a></td><td>Hero message, empty H1, and broken internal resource links.</td></tr>
+            <tr><td><a href="https://bodybalancesystemonline.com/pages/financing-1">Financing page</a></td><td>Financing "Click Here" points to the contact page without the sales form.</td></tr>
+            <tr><td><a href="https://bodybalancesystemonline.com/products/ovationult">OvationULT product page</a></td><td>$59,997 price, add-to-cart focus, limited quote/financing support near price.</td></tr>
+            <tr><td><a href="https://bodybalancesystemonline.com/sitemap.xml">Sitemap index</a> and <a href="https://bodybalancesystemonline.com/sitemap_pages_1.xml?from=188140995&to=104751595622">pages sitemap</a></td><td>Duplicate/stale page variants and copy-of landing pages are public/sitemap-listed.</td></tr>
+            <tr><td><a href="https://bodybalancesystemonline.com/robots.txt">Robots.txt</a></td><td>Public crawl rules allow normal product, collection, page, and blog crawling.</td></tr>
+            <tr><td><a href="https://adstransparency.google.com/?region=US&domain=bodybalancesystemonline.com">Google Ads Transparency Center</a></td><td>Public ad library showed 35 ads associated with the domain; no performance metrics are exposed.</td></tr>
+            <tr><td><a href="https://www.facebook.com/help/259468828226154/">Meta Ad Library help</a></td><td>Meta confirms its Ad Library shows active ads, but public performance data is limited.</td></tr>
+            <tr><td><a href="https://blog.google/technology/ads/announcing-the-launch-of-the-new-ads-transparency-center/">Google Ads Transparency Center announcement</a></td><td>Google explains the transparency center is for seeing advertiser ads, not private performance reporting.</td></tr>
+            <tr><td><a href="dashboard-preview.png">Local dashboard preview screenshot</a></td><td>Proof the dashboard renders locally.</td></tr>
+            <tr><td><a href="evidence-broken-blog-404.png">404 screenshot</a></td><td>Visual evidence that a tested resource URL returns Page not found.</td></tr>
+            <tr><td><a href="evidence-homepage-hero.png">Homepage screenshot</a></td><td>Visual evidence of the above-the-fold homepage message and CTA area.</td></tr>
+            <tr><td><a href="evidence-ovation-product.png">OvationULT screenshot</a></td><td>Visual evidence of price and Add to cart placement on a high-ticket product page.</td></tr>
+            <tr><td><a href="evidence-collections.png">Collections screenshot</a></td><td>Visual evidence of the collections page checked for duplicate URL versions.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer>
+      Prepared as a public-surface audit. Claims about spend, clicks, campaign performance, and conversion attribution must be verified inside the ad accounts and analytics accounts before being treated as final financial facts.
+    </footer>
+  </main>
+</body>
+</html>
+
+
+
