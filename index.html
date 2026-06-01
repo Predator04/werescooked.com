@@ -52,6 +52,12 @@
     .card h3{margin:0 0 8px;font-size:17px}
     .card p{margin:0 0 10px;color:var(--muted);font-size:14px}
     .card ul{margin:10px 0 0;padding-left:19px;font-size:14px}
+    .review-grid{grid-template-columns:repeat(3,1fr);margin:22px 0}
+    .review-card{padding:22px;border-left:6px solid var(--green)}
+    .review-card h3{margin:0 0 8px;font-size:17px}
+    .review-card p{margin:0 0 14px;color:var(--muted);font-size:14px}
+    .review-card a{display:inline-block;background:var(--teal);color:#fff;border-radius:8px;padding:9px 12px;font-weight:900}
+    .review-card a:hover{text-decoration:none;background:#0b5860}
     li{margin:7px 0}
     .adbox{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
     .shot{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
@@ -73,7 +79,7 @@
     .good{border-left:6px solid var(--green)}
     .warn{border-left:6px solid var(--gold)}
     footer{margin-top:34px;color:var(--muted);font-size:12px;text-align:center}
-    @media(max-width:900px){.stats,.timeline,.two,.adbox{grid-template-columns:1fr}.stat strong{font-size:28px}h1{font-size:34px}.tag{display:none}.row{grid-template-columns:1fr}}
+    @media(max-width:900px){.stats,.timeline,.two,.adbox,.review-grid{grid-template-columns:1fr}.stat strong{font-size:28px}h1{font-size:34px}.tag{display:none}.row{grid-template-columns:1fr}}
     @media(max-width:900px){.evidence-grid{grid-template-columns:1fr}}
     @media print{body{background:#fff}.hero{-webkit-print-color-adjust:exact;print-color-adjust:exact}.panel{box-shadow:none;break-inside:avoid}.finding{break-inside:avoid}}
   </style>
@@ -98,6 +104,28 @@
       <h2>Executive Verdict</h2>
       <p>The site has enough product proof to sell, but interested buyers are being sent to broken, confusing, or incomplete next steps.</p>
       <p class="note">Important: public Google Ads Transparency confirms ads exist for the domain, but it does not report clicks, cost, CTR, conversions, keywords, or targeting. Any ad performance claims must be verified inside the ad accounts before being treated as final.</p>
+    </section>
+
+    <section class="section">
+      <h2>CEO Review Pages</h2>
+      <p>Start here for the ad strategy, competitor sales playbook, and revenue growth plan. All three pages are linked and ready for review.</p>
+      <div class="grid review-grid">
+        <article class="panel review-card">
+          <h3>Competitor Ad Review</h3>
+          <p>15 original Body Balance ad concepts built from current red light therapy ad patterns.</p>
+          <a href="ads-ceo-review.html">Open ad review</a>
+        </article>
+        <article class="panel review-card">
+          <h3>Top Red Light Winners</h3>
+          <p>Who the category winners are, how they run, and how they appear to generate sales.</p>
+          <a href="top-red-light-therapy-winners.html">Open winners breakdown</a>
+        </article>
+        <article class="panel review-card">
+          <h3>Revenue Growth Plan</h3>
+          <p>AI chatbot, landing pages, quote flows, financing, follow-up, retargeting, and tracking.</p>
+          <a href="revenue-growth-plan.html">Open growth plan</a>
+        </article>
+      </div>
     </section>
 
     <section class="grid stats">
